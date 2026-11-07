@@ -28,14 +28,14 @@ namespace PR_10.Elements
             // Запоминаем объект, для того чтобы в последующем обратиться к нему
             this.Human = Data as Classes.Human;
 
-            img.Source = new BitmapImage(new Uri(this.Human.Img));
+            img.Source = new BitmapImage(new Uri(this.Human.Img, UriKind.Relative));
 
             name.Content = this.Human.Name;
    
             lrace.Content = Data.GetType().Name;
         }
 
-        /// <summary> Метод воспроизведения фраз
+
         private void Speak(object sender, MouseButtonEventArgs e)
         {
             Human.Speak(text);

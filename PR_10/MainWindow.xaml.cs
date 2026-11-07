@@ -20,9 +20,12 @@ namespace PR_10
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MediaPlayer MediaPlayer = new MediaPlayer();
+        private Russian Russian = new Russian("Оптимус прайм", @"\Images\avatar_placeholder.png");
         public MainWindow()
         {
             InitializeComponent();
+            parent.Children.Add(new Elements.Item(Russian));
         }
     }
 }

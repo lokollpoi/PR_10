@@ -1,10 +1,11 @@
 ﻿using PR_10.Classes;
 using System;
 using System.Collections.Generic;
+using System.Windows.Controls;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace PR_10
 {
@@ -34,11 +35,10 @@ namespace PR_10
 
 
         public override void Speak(Label Phrase)
-        { 
+        {
             Phrase.Content = Phrases[StepAudio]._Phrase;
-  
-            MainWindow.MediaPlayer.Open(new Uri(Phrases[StepAudio].Src));
-  
+
+            MainWindow.MediaPlayer.Open(new Uri(Phrases[StepAudio].Src, UriKind.Relative));
             MainWindow.MediaPlayer.Play();
 
             StepAudio++;
@@ -50,9 +50,9 @@ namespace PR_10
  
             List<Phrase> allPhrases = new List<Phrase>();
 
-            allPhrases.Add(new Phrase("Привет", @"..."));
-            allPhrases.Add(new Phrase("Как дела?", @"..."));
-            allPhrases.Add(new Phrase("Меня зовут Александр.", @"..."));
+            allPhrases.Add(new Phrase("Привет", @"Voices\privet.wav"));
+            allPhrases.Add(new Phrase("Как дела?", @"Voices\kak_dela.wav"));
+            allPhrases.Add(new Phrase("Меня зовут ОПТИМУС ПРАЙМ.", @"Voices\optimus_prime.wav"));
   
             return allPhrases;
         }

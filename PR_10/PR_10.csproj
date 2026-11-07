@@ -58,7 +58,7 @@
     <Compile Include="Elements\Item.xaml.cs">
       <DependentUpon>Item.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Russian.cs" />
+    <Compile Include="Classes\Russian.cs" />
     <Page Include="Elements\Item.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,12 +104,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Voices\kak_dela.mp3" />
+    <Content Include="Voices\optimus_prime.mp3" />
+    <Content Include="Voices\privet.mp3" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\avatar_placeholder.png" />
-    <Content Include="Voices\kak_dela.wav" />
-    <Content Include="Voices\optimus_prime.wav" />
-    <Content Include="Voices\privet.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
