@@ -22,10 +22,12 @@ namespace PR_10
     {
         public static MediaPlayer MediaPlayer = new MediaPlayer();
         private Russian Russian = new Russian("Оптимус прайм", @"\Images\avatar_placeholder.png");
+        private Russian English = new Russian("Оптимус прайм", @"\Images\avatar_placeholder.png");
         public MainWindow()
         {
             InitializeComponent();
             parent.Children.Add(new Elements.Item(Russian));
+            parent.Children.Add(new Elements.Item(English));
         }
     }
 }

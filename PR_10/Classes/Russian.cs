@@ -50,9 +50,9 @@ namespace PR_10
  
             List<Phrase> allPhrases = new List<Phrase>();
 
-            allPhrases.Add(new Phrase("Привет", @"Voices\privet.wav"));
-            allPhrases.Add(new Phrase("Как дела?", @"Voices\kak_dela.wav"));
-            allPhrases.Add(new Phrase("Меня зовут ОПТИМУС ПРАЙМ.", @"Voices\optimus_prime.wav"));
+            allPhrases.Add(new Phrase("Привет", @"C:\Users\levne\source\repos\PR_10\PR_10\Voices\privet.mp3"));
+            allPhrases.Add(new Phrase("Как дела?", @"C:\Users\levne\source\repos\PR_10\PR_10\Voices\kak_dela.mp3"));
+            allPhrases.Add(new Phrase("Меня зовут ОПТИМУС ПРАЙМ.", @"C:\Users\levne\source\repos\PR_10\PR_10\Voices\optimus_prime.mp3"));
   
             return allPhrases;
         }
